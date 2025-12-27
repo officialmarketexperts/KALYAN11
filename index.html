@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kalyan11 – Premium Betting Experience</title>
+<title>Kalyan11 – Ultra Premium Betting App</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Font -->
+<!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 :root{
   --gold:#f5c97a;
-  --dark:#0b0f1a;
-  --glass:rgba(255,255,255,0.08);
+  --green:#1aff7c;
+  --glass:rgba(255,255,255,.12);
 }
 
 *{
@@ -26,44 +24,49 @@
 }
 
 body{
-  background:radial-gradient(circle at top,#141b34,#05070f 70%);
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top, rgba(0,0,0,.55), rgba(0,0,0,.95)),
+    url("https://uploads.onecompiler.io/446vwj75z/448t3pzqj/WhatsApp%20Image%202025-12-27%20at%2013.22.59%20(1).jpeg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
   color:#fff;
-  overflow-x:hidden;
+}
+
+/* ===== CONTAINER ===== */
+.wrapper{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
 }
 
 /* ===== HERO ===== */
 .hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
   text-align:center;
-  padding:40px 15px;
+  margin-bottom:70px;
 }
 
-.logo{
-  width:140px;
-  height:140px;
+.logo-box{
+  width:150px;
+  height:150px;
+  margin:auto;
   border-radius:50%;
+  padding:8px;
   background:linear-gradient(145deg,#ffd88a,#a86b00);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:36px;
-  font-weight:800;
-  color:#000;
-  box-shadow:0 0 60px rgba(245,201,122,.8);
+  box-shadow:0 0 80px rgba(245,201,122,.9);
   animation:pulse 2.5s infinite;
 }
 
-@keyframes pulse{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.07)}
+.logo-box img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
 }
 
 .hero h1{
-  font-size:clamp(28px,5vw,52px);
+  font-size:clamp(32px,5vw,56px);
   margin-top:20px;
   font-weight:800;
 }
@@ -75,168 +78,199 @@ body{
 }
 
 .hero p{
-  max-width:620px;
-  opacity:.85;
+  max-width:700px;
   margin:15px auto 30px;
+  opacity:.9;
   font-size:16px;
 }
 
-/* ===== BUTTON ===== */
-.btn-main{
-  background:linear-gradient(135deg,#ffd88a,#ff9f1c);
-  color:#000;
-  padding:16px 38px;
+/* ===== CTA BUTTONS ===== */
+.cta{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:16px 36px;
   font-size:18px;
-  border-radius:50px;
   font-weight:700;
+  border-radius:50px;
   text-decoration:none;
-  box-shadow:0 15px 40px rgba(255,159,28,.6);
   transition:.4s;
 }
 
-.btn-main:hover{
-  transform:translateY(-4px) scale(1.03);
-  box-shadow:0 25px 60px rgba(255,159,28,.9);
+.btn-apk{
+  background:var(--green);
+  color:#000;
+  box-shadow:0 15px 40px rgba(26,255,124,.6);
+}
+
+.btn-apk:hover{
+  transform:scale(1.06);
+}
+
+.btn-web{
+  border:2px solid var(--gold);
+  color:var(--gold);
+}
+
+.btn-web:hover{
+  background:var(--gold);
+  color:#000;
 }
 
 /* ===== FEATURES ===== */
 .features{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
-  max-width:1100px;
-  margin:70px auto;
-  padding:0 20px;
+  margin:80px 0;
 }
 
 .card{
   background:var(--glass);
-  backdrop-filter:blur(15px);
+  backdrop-filter:blur(18px);
   border-radius:22px;
-  padding:30px 22px;
+  padding:28px 22px;
   text-align:center;
-  border:1px solid rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.18);
   transition:.4s;
 }
 
 .card:hover{
   transform:translateY(-10px);
-  box-shadow:0 0 50px rgba(245,201,122,.25);
+  box-shadow:0 0 60px rgba(245,201,122,.25);
 }
 
 .card i{
-  font-size:42px;
-  margin-bottom:15px;
+  font-size:40px;
   color:var(--gold);
+  margin-bottom:12px;
   animation:float 3s ease-in-out infinite;
+}
+
+.card h3{
+  font-size:20px;
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:14px;
+  opacity:.9;
+}
+
+/* ===== HIGHLIGHT STRIP ===== */
+.highlight{
+  background:linear-gradient(135deg,#ffd88a,#ff9f1c);
+  color:#000;
+  border-radius:20px;
+  padding:35px 25px;
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.highlight h2{
+  font-size:32px;
+  font-weight:800;
+}
+
+.highlight p{
+  margin-top:10px;
+  font-weight:600;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  font-size:13px;
+  opacity:.7;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.06)}
 }
 
 @keyframes float{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
 }
-
-.card h3{
-  margin-bottom:8px;
-  font-size:20px;
-}
-
-.card p{
-  font-size:14px;
-  opacity:.85;
-}
-
-/* ===== DOWNLOAD ===== */
-.download{
-  text-align:center;
-  padding:70px 20px;
-}
-
-.download h2{
-  font-size:clamp(26px,4vw,42px);
-  margin-bottom:15px;
-}
-
-.apk-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  background:#1aff7c;
-  color:#000;
-  padding:16px 32px;
-  border-radius:50px;
-  font-weight:700;
-  text-decoration:none;
-  font-size:18px;
-  box-shadow:0 15px 40px rgba(26,255,124,.6);
-  transition:.4s;
-}
-
-.apk-btn:hover{
-  transform:scale(1.05);
-}
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:25px;
-  font-size:13px;
-  opacity:.6;
-}
 </style>
 </head>
 
 <body>
 
-<section class="hero">
-  <div class="logo">K11</div>
+<div class="wrapper">
 
-  <h1>Welcome to <span>Kalyan11</span></h1>
-  <p>India’s most trusted ultra-premium betting platform. Lightning-fast withdrawals, live games, and unmatched luxury experience.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="logo-box">
+      <img src="https://uploads.onecompiler.io/446vwj75z/448t3pzqj/WhatsApp%20Image%202025-12-27%20at%2013.22.58.jpeg" alt="Kalyan11 Logo">
+    </div>
 
-  <a href="#" class="btn-main">
-    <i class="fa-solid fa-bolt"></i> Join & Play Now
-  </a>
-</section>
+    <h1>Kalyan<span>11</span></h1>
+    <p>
+      India’s most trusted ultra-premium betting platform with lightning-fast withdrawals,
+      live casino games and elite VIP rewards.
+    </p>
 
-<section class="features">
-  <div class="card">
-    <i class="fa-solid fa-coins"></i>
-    <h3>Instant Withdrawals</h3>
-    <p>Fastest payout system with zero delay.</p>
-  </div>
+    <div class="cta">
+      <!-- APK LINK CONNECTED -->
+      <a href="app-release.apk" class="btn btn-apk" download>
+        <i class="fa-brands fa-android"></i> Download APK
+      </a>
 
-  <div class="card">
-    <i class="fa-solid fa-shield-halved"></i>
-    <h3>100% Secure</h3>
-    <p>Advanced encryption & trusted systems.</p>
-  </div>
+      <a href="https://kalyanonline.online/" class="btn btn-web">
+        <i class="fa-solid fa-globe"></i> Open Website
+      </a>
+    </div>
+  </section>
 
-  <div class="card">
-    <i class="fa-solid fa-gamepad"></i>
-    <h3>Live Casino</h3>
-    <p>Premium live games with real dealers.</p>
-  </div>
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="card">
+      <i class="fa-solid fa-bolt"></i>
+      <h3>Instant Bets</h3>
+      <p>Ultra-fast betting engine with zero lag.</p>
+    </div>
 
-  <div class="card">
-    <i class="fa-solid fa-gift"></i>
-    <h3>Daily Bonuses</h3>
-    <p>Exclusive rewards for VIP players.</p>
-  </div>
-</section>
+    <div class="card">
+      <i class="fa-solid fa-wallet"></i>
+      <h3>Fast Withdrawals</h3>
+      <p>Quick payouts directly to your account.</p>
+    </div>
 
-<section class="download">
-  <h2>Download Kalyan11 App</h2>
-  <p>Optimized for Android • Smooth • Ultra-Fast</p><br>
+    <div class="card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>100% Secure</h3>
+      <p>Advanced security & data protection.</p>
+    </div>
 
-  <a href="#" class="apk-btn">
-    <i class="fa-brands fa-android"></i> Download APK
-  </a>
-</section>
+    <div class="card">
+      <i class="fa-solid fa-gift"></i>
+      <h3>Daily Bonuses</h3>
+      <p>Special rewards for active players.</p>
+    </div>
+  </section>
 
-<footer>
-  © 2025 Kalyan11. All Rights Reserved.
-</footer>
+  <!-- HIGHLIGHT -->
+  <section class="highlight">
+    <h2>Trusted by Thousands of Players</h2>
+    <p>Play smarter • Win bigger • Withdraw faster</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Kalyan11 • All Rights Reserved
+  </footer>
+
+</div>
 
 </body>
 </html>
