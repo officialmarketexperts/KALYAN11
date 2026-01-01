@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kalyan11 – Ultra Premium Betting App</title>
+<title>Kalyan11 – Ultra Premium Platform</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<meta name="description" content="Kalyan11 – Premium platform with fast withdrawals, live games and VIP rewards. 18+ only. Play responsibly.">
 
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '2071884796716897');
+fbq('track', 'PageView');
+</script>
+<!-- END META PIXEL -->
 
 <style>
 :root{
@@ -30,18 +49,51 @@ body{
     url("https://uploads.onecompiler.io/446vwj75z/448t3pzqj/WhatsApp%20Image%202025-12-27%20at%2013.22.59%20(1).jpeg");
   background-size:cover;
   background-position:center;
-  background-attachment:fixed;
   color:#fff;
 }
 
-/* ===== CONTAINER ===== */
+/* AGE GATE */
+#ageGate{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.age-box{
+  background:#111;
+  padding:35px;
+  border-radius:20px;
+  text-align:center;
+  max-width:320px;
+}
+
+.age-box h2{
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+.age-box button{
+  margin-top:15px;
+  padding:12px 30px;
+  border:none;
+  border-radius:50px;
+  background:var(--gold);
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* CONTAINER */
 .wrapper{
   max-width:1100px;
   margin:auto;
   padding:60px 20px;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   text-align:center;
   margin-bottom:70px;
@@ -81,15 +133,14 @@ body{
   max-width:700px;
   margin:15px auto 30px;
   opacity:.9;
-  font-size:16px;
 }
 
-/* ===== CTA BUTTONS ===== */
+/* CTA */
 .cta{
   display:flex;
   justify-content:center;
-  flex-wrap:wrap;
   gap:20px;
+  flex-wrap:wrap;
 }
 
 .btn{
@@ -107,11 +158,6 @@ body{
 .btn-apk{
   background:var(--green);
   color:#000;
-  box-shadow:0 15px 40px rgba(26,255,124,.6);
-}
-
-.btn-apk:hover{
-  transform:scale(1.06);
 }
 
 .btn-web{
@@ -119,12 +165,11 @@ body{
   color:var(--gold);
 }
 
-.btn-web:hover{
-  background:var(--gold);
-  color:#000;
+.btn:hover{
+  transform:scale(1.06);
 }
 
-/* ===== FEATURES ===== */
+/* FEATURES */
 .features{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -136,141 +181,104 @@ body{
   background:var(--glass);
   backdrop-filter:blur(18px);
   border-radius:22px;
-  padding:28px 22px;
+  padding:28px;
   text-align:center;
-  border:1px solid rgba(255,255,255,.18);
-  transition:.4s;
-}
-
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 60px rgba(245,201,122,.25);
 }
 
 .card i{
   font-size:40px;
   color:var(--gold);
-  margin-bottom:12px;
-  animation:float 3s ease-in-out infinite;
+  margin-bottom:10px;
 }
 
-.card h3{
-  font-size:20px;
-  margin-bottom:6px;
-}
-
-.card p{
-  font-size:14px;
-  opacity:.9;
-}
-
-/* ===== HIGHLIGHT STRIP ===== */
+/* HIGHLIGHT */
 .highlight{
   background:linear-gradient(135deg,#ffd88a,#ff9f1c);
   color:#000;
   border-radius:20px;
-  padding:35px 25px;
+  padding:35px;
   text-align:center;
   margin-bottom:70px;
 }
 
-.highlight h2{
-  font-size:32px;
-  font-weight:800;
-}
-
-.highlight p{
-  margin-top:10px;
-  font-weight:600;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   text-align:center;
   font-size:13px;
   opacity:.7;
 }
 
-/* ===== ANIMATIONS ===== */
+/* ANIMATIONS */
 @keyframes pulse{
   0%,100%{transform:scale(1)}
   50%{transform:scale(1.06)}
-}
-
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
 }
 </style>
 </head>
 
 <body>
 
+<!-- NOSCRIPT META PIXEL -->
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2071884796716897&ev=PageView&noscript=1"/>
+</noscript>
+
+<!-- AGE GATE -->
+<div id="ageGate">
+  <div class="age-box">
+    <h2>18+ Only</h2>
+    <p>This platform is restricted to users aged 18 and above.</p>
+    <button onclick="enterSite()">I am 18+</button>
+  </div>
+</div>
+
 <div class="wrapper">
 
-  <!-- HERO -->
   <section class="hero">
     <div class="logo-box">
-      <img src="https://uploads.onecompiler.io/446vwj75z/448t3pzqj/WhatsApp%20Image%202025-12-27%20at%2013.22.58.jpeg" alt="Kalyan11 Logo">
+      <img src="https://uploads.onecompiler.io/446vwj75z/448t3pzqj/WhatsApp%20Image%202025-12-27%20at%2013.22.58.jpeg">
     </div>
 
     <h1>Kalyan<span>11</span></h1>
-    <p>
-      India’s most trusted ultra-premium betting platform with lightning-fast withdrawals,
-      live casino games and elite VIP rewards.
-    </p>
+    <p>Premium platform with fast withdrawals, live games and VIP rewards.</p>
 
     <div class="cta">
-      <!-- APK LINK CONNECTED -->
-      <a href="app-release.apk" class="btn btn-apk" download>
+      <a href="app-release.apk" class="btn btn-apk"
+         onclick="fbq('trackCustom','APK_Download')">
         <i class="fa-brands fa-android"></i> Download APK
       </a>
 
-      <a href="https://kalyanonline.online/" class="btn btn-web">
+      <a href="https://kalyanonline.online/" class="btn btn-web"
+         onclick="fbq('trackCustom','Website_Open')">
         <i class="fa-solid fa-globe"></i> Open Website
       </a>
     </div>
   </section>
 
-  <!-- FEATURES -->
   <section class="features">
-    <div class="card">
-      <i class="fa-solid fa-bolt"></i>
-      <h3>Instant Bets</h3>
-      <p>Ultra-fast betting engine with zero lag.</p>
-    </div>
-
-    <div class="card">
-      <i class="fa-solid fa-wallet"></i>
-      <h3>Fast Withdrawals</h3>
-      <p>Quick payouts directly to your account.</p>
-    </div>
-
-    <div class="card">
-      <i class="fa-solid fa-shield-halved"></i>
-      <h3>100% Secure</h3>
-      <p>Advanced security & data protection.</p>
-    </div>
-
-    <div class="card">
-      <i class="fa-solid fa-gift"></i>
-      <h3>Daily Bonuses</h3>
-      <p>Special rewards for active players.</p>
-    </div>
+    <div class="card"><i class="fa-solid fa-bolt"></i><h3>Instant Access</h3></div>
+    <div class="card"><i class="fa-solid fa-wallet"></i><h3>Fast Withdrawals</h3></div>
+    <div class="card"><i class="fa-solid fa-shield-halved"></i><h3>Secure</h3></div>
+    <div class="card"><i class="fa-solid fa-gift"></i><h3>Daily Rewards</h3></div>
   </section>
 
-  <!-- HIGHLIGHT -->
   <section class="highlight">
-    <h2>Trusted by Thousands of Players</h2>
-    <p>Play smarter • Win bigger • Withdraw faster</p>
+    <h2>Trusted by Thousands</h2>
+    <p>18+ Only • Play Responsibly</p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    © 2025 Kalyan11 • All Rights Reserved
+    © 2025 Kalyan11 • 18+ Only • Play Responsibly
   </footer>
 
 </div>
+
+<script>
+function enterSite(){
+  document.getElementById('ageGate').style.display='none';
+}
+</script>
 
 </body>
 </html>
